@@ -227,32 +227,41 @@
             box-shadow: 0 30px 80px rgba(0,0,0,0.2);
         }
 
+        .video-background {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2;
+        }
+
         .video-placeholder {
             position: absolute;
             inset: 0;
-            background: var(--black);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.4s ease;
-        }
-
-        .video-placeholder::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(26,26,26,0.9) 100%);
-        }
-
-        .video-placeholder:hover {
-            background: var(--charcoal);
+            z-index: 3;
         }
 
         .video-placeholder:hover .play-button {
             transform: scale(1.1);
             background: var(--white);
+        }
+
+        .video-wrapper:hover .video-overlay {
+            background: rgba(0,0,0,0.6);
         }
 
         .play-button {
@@ -305,6 +314,7 @@
             height: 100%;
             position: absolute;
             inset: 0;
+            z-index: 4;
         }
 
         @keyframes fadeInUp {
@@ -1437,6 +1447,10 @@
     <section class="video-section">
         <div class="video-section-container">
             <div class="video-wrapper">
+                <video class="video-background" autoplay muted loop playsinline>
+                    <source src="https://traincollective.com/wp-content/uploads/2025/09/young-man-exercising-intensely-in-a-modern-gym-set-2025-09-09-23-15-40-utc.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
                 <div class="video-placeholder" id="videoPlaceholder">
                     <div class="play-button" onclick="playVideo()">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -1782,6 +1796,8 @@
         function playVideo() {
             const placeholder = document.getElementById('videoPlaceholder');
             const video = document.getElementById('vslVideo');
+            const backgroundVideo = document.querySelector('.video-background');
+            const overlay = document.querySelector('.video-overlay');
             
             // Replace this URL with your actual VSL video embed URL
             // Examples:
@@ -1793,6 +1809,8 @@
             
             video.src = videoUrl;
             placeholder.style.display = 'none';
+            if (backgroundVideo) backgroundVideo.style.display = 'none';
+            if (overlay) overlay.style.display = 'none';
             video.style.display = 'block';
         }
 
