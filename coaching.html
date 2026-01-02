@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scale Your Brand | Bryant Knight — Former President & COO of Malbon Golf</title>
+    <title>1:1 Personalized Coaching | Train Collective — Body. Fuel. Mind.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --white: #FFFFFF;
@@ -15,6 +15,8 @@
             --light-gray: #F5F5F5;
             --medium-gray: #9A9590;
             --dark-gray: #666666;
+            --accent: #C8A87C;
+            --dark-bg: #17181a;
         }
 
         * {
@@ -29,8 +31,8 @@
 
         body {
             font-family: 'DM Sans', sans-serif;
-            background: var(--white);
-            color: var(--black);
+            background: var(--dark-bg);
+            color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -60,23 +62,24 @@
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            background: var(--black);
+            background: var(--dark-bg);
             transition: all 0.4s ease;
         }
 
         nav.scrolled {
-            background: var(--black);
+            background: var(--dark-bg);
             padding: 1rem 4rem;
         }
 
         .logo {
-            height: 20px;
+            height: 24px;
             width: auto;
         }
 
         .logo img {
             height: 100%;
             width: auto;
+            filter: brightness(0) invert(1);
         }
 
         /* Hero Section */
@@ -101,7 +104,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: var(--black);
+            background: var(--dark-bg);
             color: var(--white);
             padding: 0.5rem 1rem;
             font-size: 0.65rem;
@@ -117,7 +120,7 @@
             content: '';
             width: 6px;
             height: 6px;
-            background: green;
+            background: #4ADE80;
             border-radius: 50%;
             animation: pulse 2s ease infinite;
         }
@@ -128,23 +131,25 @@
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.8rem, 5vw, 4.2rem);
-            font-weight: 400;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 35px);
+            font-style: normal;
+            font-weight: 700;
             line-height: 1.1;
             margin-bottom: 1.25rem;
             animation: fadeInUp 0.8s ease 0.1s forwards;
             opacity: 0;
+            text-transform: uppercase;
         }
 
         .hero h1 em {
-            font-style: italic;
-            color: var(--dark-gray);
+            font-style: normal;
+            color: rgba(255,255,255,0.7);
         }
 
         .hero-subtitle {
             font-size: 1.1rem;
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.8);
             max-width: 600px;
             margin-bottom: 2rem;
             line-height: 1.8;
@@ -161,8 +166,8 @@
         }
 
         .btn-primary {
-            background: var(--black);
-            color: var(--white);
+            background: var(--white);
+            color: var(--dark-bg);
             padding: 1.25rem 3rem;
             font-size: 0.7rem;
             letter-spacing: 0.2em;
@@ -177,32 +182,32 @@
         }
 
         .btn-primary:hover {
-            background: var(--charcoal);
+            background: rgba(255,255,255,0.9);
             transform: translateY(-3px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 40px rgba(255,255,255,0.15);
         }
 
         .btn-secondary {
-            color: var(--black);
+            color: var(--white);
             font-size: 0.75rem;
             letter-spacing: 0.1em;
             text-decoration: none;
             padding: 1.25rem 1.5rem;
-            border: 1px solid rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.3);
             transition: all 0.3s ease;
             font-weight: 500;
             display: inline-block;
         }
 
         .btn-secondary:hover {
-            border-color: var(--black);
-            background: var(--light-gray);
+            border-color: var(--white);
+            background: rgba(255,255,255,0.1);
         }
 
         /* Video Section - Wide Width Below Hero */
         .video-section {
             width: 100%;
-            background: var(--white);
+            background: var(--dark-bg);
             padding: 4rem 4rem;
             margin: 0;
         }
@@ -238,9 +243,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: url('https://bryantknight.com/wp-content/uploads/2025/04/Bryant-320x320-1.jpg') center/cover;
-            opacity: 0.3;
-            filter: blur(2px) grayscale(100%);
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(26,26,26,0.9) 100%);
         }
 
         .video-placeholder:hover {
@@ -269,7 +272,7 @@
         .play-button svg {
             width: 28px;
             height: 28px;
-            color: var(--black);
+            color: var(--dark-bg);
             margin-left: 4px;
         }
 
@@ -291,10 +294,10 @@
 
         .video-title {
             display: block;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 1.1rem;
+            font-weight: 600;
             color: var(--white);
-            font-style: italic;
         }
 
         .video-wrapper iframe {
@@ -317,21 +320,21 @@
 
         /* Credibility Strip */
         .credibility {
-            background: var(--light-gray);
+            background: var(--dark-bg);
             padding: 3rem 6rem;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 5rem;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .credibility-label {
             font-size: 0.65rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.7);
         }
 
         .credibility-brands {
@@ -341,11 +344,13 @@
         }
 
         .credibility-brands span {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 1.2rem;
-            color: var(--black);
+            font-weight: 700;
+            color: var(--white);
             opacity: 0.5;
             transition: opacity 0.3s ease;
+            text-transform: uppercase;
         }
 
         .credibility-brands span:hover {
@@ -363,7 +368,7 @@
             font-size: 0.65rem;
             letter-spacing: 0.3em;
             text-transform: uppercase;
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.7);
             margin-bottom: 2rem;
             display: flex;
             align-items: center;
@@ -377,12 +382,19 @@
         }
 
         .problem h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 400;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 35px);
+            font-style: normal;
+            font-weight: 700;
             line-height: 1.25;
             max-width: 900px;
             margin-bottom: 4rem;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        .problem .section-tag {
+            color: rgba(255,255,255,0.7);
         }
 
         .problem-grid {
@@ -394,20 +406,21 @@
 
         .problem-card {
             padding: 2.5rem;
-            background: var(--light-gray);
-            border: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             transition: all 0.4s ease;
         }
 
         .problem-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            box-shadow: 0 20px 60px rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.08);
         }
 
         .problem-icon {
             width: 48px;
             height: 48px;
-            background: var(--black);
+            background: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -417,25 +430,28 @@
         .problem-icon svg {
             width: 24px;
             height: 24px;
-            stroke: var(--white);
+            stroke: var(--dark-bg);
         }
 
         .problem-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 1.3rem;
-            font-weight: 500;
+            font-style: normal;
+            font-weight: 700;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: var(--white);
         }
 
         .problem-card p {
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.8);
             font-size: 0.95rem;
             line-height: 1.7;
         }
 
         /* About Section */
         .about {
-            background: var(--black);
+            background: var(--dark-bg);
             color: var(--white);
             padding: 8rem 0;
             position: relative;
@@ -458,22 +474,19 @@
 
         .about-image-frame {
             aspect-ratio: 4/5;
-            background: linear-gradient(145deg, var(--black) 0%, #2a2a2a 100%);
+            background: linear-gradient(145deg, var(--dark-bg) 0%, #2a2a2a 100%);
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .about-image-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-            filter: grayscale(20%);
-            transition: filter 0.4s ease;
-        }
-
-        .about-image-frame:hover img {
-            filter: grayscale(0%);
+        .about-image-frame .logo-large {
+            width: 60%;
+            height: auto;
+            opacity: 0.3;
+            filter: brightness(0) invert(1);
         }
 
         .about-content .section-tag {
@@ -481,11 +494,13 @@
         }
 
         .about h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 400;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 35px);
+            font-style: normal;
+            font-weight: 700;
             line-height: 1.25;
             margin-bottom: 2rem;
+            text-transform: uppercase;
         }
 
         .about-text {
@@ -517,8 +532,9 @@
         }
 
         .credential-value {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 1.1rem;
+            font-weight: 700;
         }
 
         /* Cohort Section */
@@ -534,16 +550,23 @@
             margin: 0 auto 5rem;
         }
 
+        .cohort .section-tag {
+            color: rgba(255,255,255,0.7);
+        }
+
         .cohort h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 400;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 35px);
+            font-style: normal;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             white-space: nowrap;
+            text-transform: uppercase;
+            color: var(--white);
         }
 
         .cohort-subtitle {
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.8);
             font-size: 1.1rem;
             line-height: 1.8;
         }
@@ -556,38 +579,41 @@
 
         .feature {
             padding: 3rem;
-            background: var(--light-gray);
-            border: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             position: relative;
             overflow: hidden;
             transition: all 0.4s ease;
         }
 
         .feature:hover {
-            background: var(--white);
+            background: rgba(255,255,255,0.08);
             transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 50px rgba(255,255,255,0.08);
         }
 
         .feature-number {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 4rem;
-            font-style: italic;
-            color: rgba(0,0,0,0.04);
+            font-weight: 700;
+            color: rgba(255,255,255,0.04);
             position: absolute;
             top: 1rem;
             right: 2rem;
         }
 
         .feature h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 1.4rem;
-            font-weight: 500;
+            font-style: normal;
+            font-weight: 700;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: var(--white);
         }
 
         .feature p {
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.8);
             font-size: 0.95rem;
             line-height: 1.8;
             max-width: 400px;
@@ -601,7 +627,7 @@
         .feature-list li {
             padding: 0.5rem 0;
             font-size: 0.9rem;
-            color: var(--black);
+            color: var(--white);
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
@@ -611,7 +637,7 @@
             content: '';
             width: 4px;
             height: 4px;
-            background: var(--black);
+            background: var(--white);
             border-radius: 50%;
             margin-top: 0.5rem;
             flex-shrink: 0;
@@ -619,7 +645,7 @@
 
         /* Ideal For Section */
         .ideal-for {
-            background: var(--black);
+            background: var(--dark-bg);
             color: var(--white);
             padding: 8rem 6rem;
         }
@@ -633,11 +659,14 @@
         }
 
         .ideal-for h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 400;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 700;
             position: sticky;
             top: 10rem;
+            text-transform: uppercase;
+            color: var(--white);
         }
 
         .ideal-profiles {
@@ -658,9 +687,12 @@
         }
 
         .profile-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 1.15rem;
+            font-style: normal;
+            font-weight: 700;
             margin-bottom: 0.75rem;
+            text-transform: uppercase;
         }
 
         .profile-desc {
@@ -669,10 +701,94 @@
             line-height: 1.7;
         }
 
+        /* Results Section */
+        .results {
+            padding: 8rem 6rem;
+            background: var(--dark-bg);
+        }
+
+        .results-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .results .section-tag {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .results h2 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 35px);
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        .results-disclaimer {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            font-style: italic;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .result-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+
+        .result-image {
+            aspect-ratio: 1/1;
+            background: var(--charcoal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .result-content {
+            padding: 1.5rem;
+        }
+
+        .result-quote {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .result-author {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .result-detail {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.7);
+        }
+
         /* Pricing Section */
         .pricing {
             padding: 8rem 6rem;
-            background: var(--light-gray);
+            background: var(--dark-bg);
         }
 
         .pricing-container {
@@ -685,11 +801,18 @@
             margin-bottom: 4rem;
         }
 
+        .pricing .section-tag {
+            color: rgba(255,255,255,0.7);
+        }
+
         .pricing h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 400;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 35px);
+            font-style: normal;
+            font-weight: 700;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: var(--white);
         }
 
         .pricing-cards {
@@ -700,19 +823,23 @@
 
         .pricing-card {
             padding: 3rem;
-            background: var(--white);
-            border: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             position: relative;
         }
 
         .pricing-card.featured {
-            background: var(--black);
+            background: rgba(255,255,255,0.1);
             color: var(--white);
-            border: none;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         .pricing-card.featured .pricing-amount {
             color: var(--white);
+        }
+
+        .pricing-card.featured .pricing-label {
+            color: rgba(255,255,255,0.7);
         }
 
         .pricing-card.featured .pricing-features li {
@@ -729,19 +856,42 @@
             text-transform: uppercase;
             margin-bottom: 1.5rem;
             display: block;
+            color: rgba(255,255,255,0.7);
         }
 
         .pricing-amount {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 3rem;
-            font-weight: 400;
+            font-style: normal;
+            font-weight: 700;
             margin-bottom: 0.5rem;
+            color: var(--white);
         }
 
         .pricing-term {
             font-size: 0.85rem;
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-savings-badge {
+            display: inline-block;
+            background: var(--white);
+            color: var(--dark-bg);
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border-radius: 2px;
+        }
+
+        .pricing-comparison {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.6);
             margin-bottom: 2rem;
+            font-style: italic;
         }
 
         .pricing-features {
@@ -755,13 +905,14 @@
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
+            color: rgba(255,255,255,0.8);
         }
 
         .pricing-features li::before {
             content: '';
             width: 5px;
             height: 5px;
-            background: var(--black);
+            background: var(--white);
             border-radius: 50%;
             margin-top: 0.4rem;
             flex-shrink: 0;
@@ -773,9 +924,9 @@
             font-size: 0.7rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            border: 1px solid var(--black);
+            border: 1px solid var(--white);
             background: transparent;
-            color: var(--black);
+            color: var(--white);
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'DM Sans', sans-serif;
@@ -788,23 +939,23 @@
         .pricing-card.featured .pricing-cta {
             background: var(--white);
             border-color: var(--white);
-            color: var(--black);
+            color: var(--dark-bg);
         }
 
         .pricing-cta:hover {
-            background: var(--black);
-            color: var(--white);
+            background: var(--white);
+            color: var(--dark-bg);
         }
 
         .pricing-card.featured .pricing-cta:hover {
-            background: var(--light-gray);
-            color: var(--black);
+            background: rgba(255,255,255,0.9);
+            color: var(--dark-bg);
         }
 
         /* Booking Section */
         .booking {
             padding: 8rem 6rem;
-            background: var(--white);
+            background: var(--dark-bg);
         }
 
         .booking-container {
@@ -817,11 +968,18 @@
             margin-bottom: 3rem;
         }
 
+        .booking .section-tag {
+            color: rgba(255,255,255,0.7);
+        }
+
         .booking h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 400;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 35px);
+            font-style: normal;
+            font-weight: 700;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: var(--white);
         }
 
         .booking-iframe-wrapper {
@@ -849,6 +1007,10 @@
             margin-bottom: 4rem;
         }
 
+        .testimonials .section-tag {
+            color: rgba(255,255,255,0.7);
+        }
+
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -857,37 +1019,40 @@
 
         .testimonial {
             padding: 2.5rem;
-            background: var(--light-gray);
-            border: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .testimonial-stars {
-            color: var(--black);
+            color: var(--white);
             margin-bottom: 1.5rem;
             letter-spacing: 0.2em;
         }
 
         .testimonial-text {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-size: 1.1rem;
-            font-style: italic;
+            font-style: normal;
+            font-weight: 500;
             line-height: 1.7;
             margin-bottom: 2rem;
+            color: var(--white);
         }
 
         .testimonial-author {
             font-size: 0.85rem;
             font-weight: 600;
+            color: var(--white);
         }
 
         .testimonial-role {
             font-size: 0.75rem;
-            color: var(--medium-gray);
+            color: rgba(255,255,255,0.7);
         }
 
         /* CTA Section */
         .final-cta {
-            background: var(--black);
+            background: var(--dark-bg);
             color: var(--white);
             padding: 8rem 6rem;
             text-align: center;
@@ -903,11 +1068,13 @@
         }
 
         .final-cta h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 400;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 5vw, 35px);
+            font-style: normal;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.2;
+            text-transform: uppercase;
         }
 
         .final-cta p {
@@ -919,12 +1086,12 @@
 
         .final-cta .btn-primary {
             background: var(--white);
-            color: var(--black);
+            color: var(--dark-bg);
             padding: 1.5rem 4rem;
         }
 
         .final-cta .btn-primary:hover {
-            background: var(--light-gray);
+            background: rgba(255,255,255,0.9);
         }
 
         .spots-remaining {
@@ -938,7 +1105,7 @@
 
         /* Footer */
         footer {
-            background: var(--charcoal);
+            background: var(--dark-bg);
             color: var(--white);
             padding: 4rem 6rem;
         }
@@ -960,6 +1127,7 @@
         .footer-logo img {
             height: 100%;
             width: auto;
+            filter: brightness(0) invert(1);
         }
 
         .footer-links {
@@ -1062,7 +1230,8 @@
             .problem-grid,
             .cohort-features,
             .pricing-cards,
-            .testimonial-grid {
+            .testimonial-grid,
+            .results-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1086,7 +1255,8 @@
                 width: 100%;
             }
 
-            .pricing {
+            .pricing,
+            .results {
                 padding: 6rem 2rem;
             }
 
@@ -1132,19 +1302,19 @@
 
     <nav id="navbar">
         <div class="logo">
-            <img src="https://bryantknight.com/wp-content/uploads/2025/04/bryant-knight-logo.png" alt="Bryant Knight">
+            <img src="https://traincollective.com/wp-content/uploads/2025/09/train-collective-logo-placeholder@2500x-8-1024x65.png" alt="Train Collective">
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">Cohort Starting Q1 2026 • Limited Spots</div>
-            <h1>Scale Your Fashion Brand<br>From <em>Momentum</em> to <em>Movement</em></h1>
-            <p class="hero-subtitle">A 12-week intensive with the former President & COO of Malbon Golf. For serious founders ready to build a global lifestyle brand.</p>
+            <div class="hero-badge">Now Accepting Applications • Limited Spots</div>
+            <h1>Shape Your Strongest Self<br>with <em>1:1 Personalized</em> Coaching</h1>
+            <p class="hero-subtitle">A premium 1-on-1 performance program integrating Fitness, Nutrition, and Mindset. Custom-built for high-performers who demand results—not excuses.</p>
             <div class="hero-cta-group">
-                <a href="#apply" class="btn-primary">Apply for the Cohort</a>
-                <a href="#about" class="btn-secondary">Learn More</a>
+                <a href="#apply" class="btn-primary">Apply for 1:1 Coaching</a>
+                <a href="#about" class="btn-secondary">See If You Qualify</a>
             </div>
         </div>
     </section>
@@ -1160,8 +1330,8 @@
                         </svg>
                     </div>
                     <div class="video-text">
-                        <span class="video-duration">Watch: 3 min</span>
-                        <span class="video-title">How I Scaled Malbon Golf to 8 Figures</span>
+                        <span class="video-duration">Watch: 5 min</span>
+                        <span class="video-title">How 1:1 Coaching Transforms Your Body, Fuel & Mind</span>
                     </div>
                 </div>
                 <!-- Replace the src with your actual VSL video URL -->
@@ -1179,49 +1349,46 @@
 
     <!-- Credibility Strip -->
     <section class="credibility">
-        <span class="credibility-label">Collaborated With</span>
+        <span class="credibility-label">The Three Pillars</span>
         <div class="credibility-brands">
-            <span>Malbon Golf</span>
-            <span>STAMPD</span>
-            <span>Beats by Dre</span>
-            <span>Adidas</span>
-            <span>Tag Heuer</span>
-            <span>Undefeated</span>
+            <span>Body</span>
+            <span>Fuel</span>
+            <span>Mind</span>
         </div>
     </section>
 
     <!-- Problem Section -->
     <section class="problem fade-in">
-        <div class="section-tag">The Challenge</div>
-        <h2>You've built something special. But scaling a fashion brand from early traction to global presence? That's a different game entirely.</h2>
+        <div class="section-tag">The Reality</div>
+        <h2>You're not average. Generic programs and random workouts will never get you where you want to go. You need a system—not a shortcut.</h2>
         
         <div class="problem-grid">
             <div class="problem-card">
                 <div class="problem-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                     </svg>
                 </div>
-                <h3>E-Commerce Plateau</h3>
-                <p>Your DTC channel is growing, but CAC keeps climbing. You're not sure which levers actually move the needle anymore.</p>
+                <h3>Training Plateau</h3>
+                <p>You've been grinding, but progress stalled. Without progressive structure and periodization, your body adapts—and stops responding.</p>
             </div>
             <div class="problem-card">
                 <div class="problem-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
-                <h3>International Expansion</h3>
-                <p>You see the opportunity abroad, but entering new markets without burning cash or diluting your brand feels impossible.</p>
+                <h3>Nutrition Confusion</h3>
+                <p>You know what you should eat, but execution falls apart. Travel, stress, and life get in the way. You need a flexible protocol, not rigid rules.</p>
             </div>
             <div class="problem-card">
                 <div class="problem-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
                     </svg>
                 </div>
-                <h3>Team & Operations</h3>
-                <p>The scrappy hustle that got you here won't get you there. You need systems, people, and processes—but where do you start?</p>
+                <h3>Mindset Gaps</h3>
+                <p>Motivation fades. Discipline wavers. Without mental frameworks and accountability, even the best plans fail. The mind leads—the body follows.</p>
             </div>
         </div>
     </section>
@@ -1231,24 +1398,24 @@
         <div class="about-container">
             <div class="about-image">
                 <div class="about-image-frame">
-                    <img src="https://bryantknight.com/wp-content/uploads/2025/04/Bryant-320x320-1.jpg" alt="Bryant Knight - Former President & COO of Malbon Golf" loading="lazy">
+                    <img class="logo-large" src="https://traincollective.com/wp-content/uploads/2025/09/train-collective-logo-placeholder@2500x-8-1024x65.png" alt="Train Collective">
                 </div>
             </div>
             <div class="about-content">
-                <div class="section-tag">Your Guide</div>
-                <h2>Bryant Knight built two of the most iconic lifestyle brands of the last decade.</h2>
-                <p class="about-text">As President & COO of Malbon Golf, Bryant led the brand through explosive growth—scaling e-commerce, expanding into 50+ countries, and building a team that turned a passion project into a global phenomenon.</p>
-                <p class="about-text">Before Malbon, he was the digital strategy architect behind STAMPD's rise as a streetwear powerhouse. His playbook? Cultural clarity meets design-led execution.</p>
-                <p class="about-text">Now, through Knight Brands, he's working with the next generation of founders who are ready to build something that matters.</p>
+                <div class="section-tag">The Train Collective Difference</div>
+                <h2>1:1 Personalized Coaching is not another fitness app. It's a complete transformation system.</h2>
+                <p class="about-text">Most programs treat fitness, nutrition, and mindset as separate problems. At Train Collective, we know they're one integrated system. When all three align, everything changes.</p>
+                <p class="about-text">1:1 Coaching pairs you with a dedicated performance coach who builds your custom blueprint—training progressions designed for your equipment, nutrition protocols that fit your lifestyle, and mindset frameworks that create unshakeable consistency.</p>
+                <p class="about-text">This isn't coaching for everyone. It's for those ready to invest in themselves and commit to the work.</p>
                 
                 <div class="about-credentials">
                     <div class="credential">
-                        <div class="credential-title">Previous Role</div>
-                        <div class="credential-value">President & COO, Malbon Golf</div>
+                        <div class="credential-title">The System</div>
+                        <div class="credential-value">Body. Fuel. Mind.</div>
                     </div>
                     <div class="credential">
-                        <div class="credential-title">Current</div>
-                        <div class="credential-value">Founder, Knight Brands</div>
+                        <div class="credential-title">The Promise</div>
+                        <div class="credential-value">Progress That Compounds</div>
                     </div>
                 </div>
             </div>
@@ -1258,54 +1425,54 @@
     <!-- Cohort Section -->
     <section class="cohort fade-in">
         <div class="cohort-header">
-            <div class="section-tag">The Program</div>
-            <h2>12 Weeks to Transform Your Brand</h2>
-            <p class="cohort-subtitle">A cohort-based intensive designed for fashion and lifestyle founders ready to scale with intention.</p>
+            <div class="section-tag">The 1:1 Method</div>
+            <h2>Your Complete Performance Blueprint</h2>
+            <p class="cohort-subtitle">A cohort-based coaching experience engineered for transformation. Every element designed to work together.</p>
         </div>
 
         <div class="cohort-features">
             <div class="feature">
                 <span class="feature-number">01</span>
-                <h3>E-Commerce Mastery</h3>
-                <p>Build a DTC engine that scales. From site optimization to email flows to conversion architecture.</p>
+                <h3>Custom Training Architecture</h3>
+                <p>Structured progressions built specifically for you—whether you train at home, in a garage gym, or a full facility.</p>
                 <ul class="feature-list">
-                    <li>Customer journey mapping & optimization</li>
-                    <li>Email & SMS automation sequences</li>
-                    <li>CAC reduction strategies that actually work</li>
-                    <li>Retention & LTV maximization</li>
+                    <li>Personalized program design</li>
+                    <li>Weekly progression adjustments</li>
+                    <li>Video demos & form feedback</li>
+                    <li>Recovery & mobility protocols</li>
                 </ul>
             </div>
             <div class="feature">
                 <span class="feature-number">02</span>
-                <h3>Brand & Positioning</h3>
-                <p>Clarify your cultural position. Build a brand that resonates beyond transactions.</p>
+                <h3>Precision Nutrition Protocol</h3>
+                <p>Simple fueling strategies that work with your life, not against it. Macro frameworks, meal templates, and flexible guidelines.</p>
                 <ul class="feature-list">
-                    <li>Brand narrative development</li>
-                    <li>Community building playbooks</li>
-                    <li>Content strategy & brand voice</li>
-                    <li>Partnership & collab frameworks</li>
+                    <li>Custom calorie & macro targets</li>
+                    <li>Meal templates & grocery lists</li>
+                    <li>Travel & dining-out strategies</li>
+                    <li>Hydration & supplement guidance</li>
                 </ul>
             </div>
             <div class="feature">
                 <span class="feature-number">03</span>
-                <h3>Operations & Scale</h3>
-                <p>Build the infrastructure for growth. Systems, people, and processes that compound.</p>
+                <h3>Mindset Mastery</h3>
+                <p>Build the mental architecture that makes consistency automatic. Habits, frameworks, and resilience tools that last.</p>
                 <ul class="feature-list">
-                    <li>Hiring & team structure</li>
-                    <li>Inventory & supply chain</li>
-                    <li>Financial modeling & forecasting</li>
-                    <li>Operational efficiency frameworks</li>
+                    <li>Daily habit anchoring system</li>
+                    <li>Weekly reflection prompts</li>
+                    <li>Stress & sleep optimization</li>
+                    <li>Goal-setting frameworks</li>
                 </ul>
             </div>
             <div class="feature">
                 <span class="feature-number">04</span>
-                <h3>International Expansion</h3>
-                <p>Go global without losing your soul. Market entry strategies that protect brand equity.</p>
+                <h3>1-on-1 Accountability</h3>
+                <p>Direct access to your coach. Weekly check-ins, real-time adjustments, and the support structure that ensures you never fall off.</p>
                 <ul class="feature-list">
-                    <li>Market prioritization & research</li>
-                    <li>Localization strategies</li>
-                    <li>Distribution & logistics</li>
-                    <li>International partnerships</li>
+                    <li>Weekly video check-ins</li>
+                    <li>Unlimited messaging support</li>
+                    <li>Progress tracking & analytics</li>
+                    <li>Quarterly strategy sessions</li>
                 </ul>
             </div>
         </div>
@@ -1314,23 +1481,60 @@
     <!-- Ideal For Section -->
     <section class="ideal-for">
         <div class="ideal-for-container">
-            <h2>This Cohort Is For:</h2>
+            <h2>1:1 Coaching Is For:</h2>
             <div class="ideal-profiles">
                 <div class="profile">
-                    <div class="profile-title">Fashion & Apparel Founders</div>
-                    <div class="profile-desc">You've found product-market fit. Now you need to scale without losing what makes you special.</div>
+                    <div class="profile-title">High-Performing Professionals</div>
+                    <div class="profile-desc">Busy executives and entrepreneurs who need efficient, structured training that delivers results without wasting time.</div>
                 </div>
                 <div class="profile">
-                    <div class="profile-title">E-Commerce Operators</div>
-                    <div class="profile-desc">You're running a DTC brand doing $1M-$20M and ready to break through to the next level.</div>
+                    <div class="profile-title">Athletes Seeking the Edge</div>
+                    <div class="profile-desc">Former or current athletes who know what discipline feels like and want to reclaim peak performance.</div>
                 </div>
                 <div class="profile">
-                    <div class="profile-title">Lifestyle Brand Builders</div>
-                    <div class="profile-desc">You want to build more than a product—you want to build a movement with cultural staying power.</div>
+                    <div class="profile-title">Committed Transformers</div>
+                    <div class="profile-desc">Men and women serious about body recomposition who are done with fads and ready for the real work.</div>
                 </div>
                 <div class="profile">
-                    <div class="profile-title">Growth-Stage Leaders</div>
-                    <div class="profile-desc">You're a CEO, CMO, or Head of E-Com who needs a strategic partner, not another agency.</div>
+                    <div class="profile-title">Lifestyle Optimizers</div>
+                    <div class="profile-desc">Those who understand that physical excellence is the foundation for success in every other area of life.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results fade-in">
+        <div class="results-container">
+            <div class="results-header">
+                <div class="section-tag">Transformations</div>
+                <h2>Real Results. Real People.</h2>
+                <p class="results-disclaimer">*Results vary depending on starting point, commitment, and program adherence.</p>
+            </div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-image">Before / After</div>
+                    <div class="result-content">
+                        <p class="result-quote">"The structure changed everything. I finally understand how training, nutrition, and mindset connect."</p>
+                        <div class="result-author">1:1 Client</div>
+                        <div class="result-detail">12-Week Transformation</div>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="result-image">Before / After</div>
+                    <div class="result-content">
+                        <p class="result-quote">"My coach saw things I couldn't. The weekly adjustments kept me progressing when I would have quit."</p>
+                        <div class="result-author">1:1 Client</div>
+                        <div class="result-detail">16-Week Journey</div>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="result-image">Before / After</div>
+                    <div class="result-content">
+                        <p class="result-quote">"This isn't just about looking better. I perform better—at work, at home, everywhere."</p>
+                        <div class="result-author">1:1 Client</div>
+                        <div class="result-detail">Ongoing Elite Member</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1346,30 +1550,34 @@
 
             <div class="pricing-cards">
                 <div class="pricing-card">
-                    <span class="pricing-label">1:1 Consultation</span>
-                    <div class="pricing-amount">$375</div>
-                    <div class="pricing-term">One-time session</div>
+                    <span class="pricing-label">1:1 Elite Coaching</span>
+                    <div class="pricing-amount">$500</div>
+                    <div class="pricing-term">Per month • Application Required</div>
                     <ul class="pricing-features">
-                        <li>30-minute video consultation</li>
-                        <li>Personalized strategic advice</li>
-                        <li>Actionable next steps</li>
-                        <li>Perfect for specific challenges</li>
+                        <li>Custom training + nutrition blueprint</li>
+                        <li>1-on-1 dedicated coach access</li>
+                        <li>Weekly video check-ins</li>
+                        <li>Unlimited messaging support</li>
+                        <li>Progress tracking & adjustments</li>
+                        <li>All FORMA membership perks</li>
                     </ul>
-                    <a href="https://intro.co/BryantKnight" target="_blank" class="pricing-cta">Book a Session</a>
+                    <a href="#book-call" class="pricing-cta">Apply Now</a>
                 </div>
                 <div class="pricing-card featured">
-                    <span class="pricing-label">Full Cohort Access</span>
+                    <div class="pricing-savings-badge">Save $3,500 (58%)</div>
+                    <span class="pricing-label">1:1 Elite Coaching</span>
                     <div class="pricing-amount">$2,500</div>
-                    <div class="pricing-term">Per month • 3-month commitment</div>
+                    <div class="pricing-term">Per year • Application Required</div>
+                    <div class="pricing-comparison">vs. $6,000/monthly billing</div>
                     <ul class="pricing-features">
-                        <li>12 weeks of intensive mentorship</li>
-                        <li>Weekly group sessions with Bryant</li>
-                        <li>Monthly 1:1 video calls (30 min)</li>
-                        <li>Unlimited async chat access</li>
-                        <li>Cohort community & peer network</li>
-                        <li>Frameworks, templates & playbooks</li>
+                        <li>Everything in monthly plan</li>
+                        <li>Priority coach assignment</li>
+                        <li>Quarterly strategy deep-dives</li>
+                        <li>Exclusive annual member resources</li>
+                        <li>Extended support hours</li>
+                        <li>Annual progress review & planning</li>
                     </ul>
-                    <a href="https://intro.co/BryantKnight" target="_blank" class="pricing-cta">Apply Now</a>
+                    <a href="#book-call" class="pricing-cta">Apply Now</a>
                 </div>
             </div>
         </div>
@@ -1379,10 +1587,11 @@
     <section class="booking" id="book-call">
         <div class="booking-container">
             <div class="booking-header">
-                <div class="section-tag">Schedule a Call</div>
-                <h2>Book Your Consultation</h2>
+                <div class="section-tag">Application</div>
+                <h2>See If You Qualify</h2>
             </div>
             <div class="booking-iframe-wrapper">
+                <!-- Replace with your actual booking/application form -->
                 <iframe src="https://api.leadconnectorhq.com/widget/booking/Ben2PTQs0SlEMZO5luGy" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="Ben2PTQs0SlEMZO5luGy_1767382487013"></iframe>
             </div>
         </div>
@@ -1391,26 +1600,26 @@
     <!-- Testimonials -->
     <section class="testimonials fade-in">
         <div class="testimonials-header">
-            <div class="section-tag">What Founders Say</div>
+            <div class="section-tag">What Members Say</div>
         </div>
         <div class="testimonial-grid">
             <div class="testimonial">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Bryant doesn't just give advice—he gives you the playbook that actually works. Our DTC revenue doubled in 6 months."</p>
-                <div class="testimonial-author">Founder</div>
-                <div class="testimonial-role">Lifestyle Apparel Brand</div>
+                <p class="testimonial-text">"Train Collective isn't random workouts—it's a complete system. The integration of training, nutrition, and mindset is what sets it apart."</p>
+                <div class="testimonial-author">1:1 Client</div>
+                <div class="testimonial-role">Executive</div>
             </div>
             <div class="testimonial">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"The clarity he brought to our operations was game-changing. We finally know what to focus on."</p>
-                <div class="testimonial-author">CEO</div>
-                <div class="testimonial-role">Fashion E-Commerce</div>
+                <p class="testimonial-text">"My coach understood my schedule and built around it. For the first time, I didn't have to choose between work and fitness."</p>
+                <div class="testimonial-author">1:1 Client</div>
+                <div class="testimonial-role">Entrepreneur</div>
             </div>
             <div class="testimonial">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"His international expansion framework saved us from making expensive mistakes. Worth every penny."</p>
-                <div class="testimonial-author">Head of Growth</div>
-                <div class="testimonial-role">DTC Brand</div>
+                <p class="testimonial-text">"The mindset component surprised me. It's not fluff—it's the actual framework that keeps everything else working."</p>
+                <div class="testimonial-author">1:1 Client</div>
+                <div class="testimonial-role">Former Athlete</div>
             </div>
         </div>
     </section>
@@ -1418,10 +1627,10 @@
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="final-cta-content">
-            <h2>Ready to Build Something That Lasts?</h2>
-            <p>The next cohort starts Q1 2026. Applications are reviewed on a rolling basis. Only founders committed to serious growth will be accepted.</p>
-            <a href="https://intro.co/BryantKnight" target="_blank" class="btn-primary">Apply for the Cohort</a>
-            <div class="spots-remaining">Only 1 spot remaining in the mentorship program</div>
+            <h2>Ready to Shape Your Strongest Self?</h2>
+            <p>1:1 Coaching accepts limited clients each quarter. Applications are reviewed personally to ensure fit. Only those committed to real transformation will be accepted.</p>
+            <a href="#book-call" class="btn-primary">Apply for 1:1 Coaching</a>
+            <div class="spots-remaining">Limited spots available for this cohort</div>
         </div>
     </section>
 
@@ -1429,13 +1638,13 @@
     <footer>
         <div class="footer-top">
             <div class="footer-logo">
-                <img src="https://bryantknight.com/wp-content/uploads/2025/04/bryant-knight-logo.png" alt="Bryant Knight">
+                <img src="https://traincollective.com/wp-content/uploads/2025/09/train-collective-logo-placeholder@2500x-8-1024x65.png" alt="Train Collective">
             </div>
         </div>
         
         <div class="footer-legal">
             <h3>Disclaimer</h3>
-            <p>The sales figures and business results stated anywhere on this page are individual results and marketing outcomes. Please understand that sales figures are not typical, and we are not implying that you will duplicate them. The marketing results reported are typical results for clients who meet our criteria. We have the benefit of building brands for 15+ years, and have an established following as a result. The average person who follows any "how to" information gets little to no results. We are using these references for example purposes only. Sales figures will vary and depend on many factors including but not limited to background, experience, and work ethic. All business entails risk as well as massive and consistent effort and action. If you're not willing to accept that, this is not for you.</p>
+            <p>The fitness results stated and shown are personal results and the results of our clients. Results will vary depending on starting point, goals, effort, medical conditions, and program adherence. The testimonials featured have used Train Collective programs or services to achieve their results. Program lengths vary depending on needs and goals. Consult your physician and follow all safety instructions before beginning any exercise program or nutrition plan. The contents on our website are for informational purposes only, and are not intended to diagnose any medical condition, replace the advice of a healthcare professional, or provide any medical advice, diagnosis, or treatment.</p>
             
             <h3>Not Facebook™</h3>
             <p>This site is not a part of the Facebook™ website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc.</p>
@@ -1444,14 +1653,12 @@
             <p>We use cookies, including third-party cookies, on this website to help operate our site and for analytics and advertising purposes. For more on how we use cookies and your cookie choices, please contact us.</p>
             
             <h3>Coaching Services Disclaimer</h3>
-            <p>Bryant Knight and Knight Brands provide mentorship and coaching services to specific individuals and/or groups. The client is aware that coaching is in no way to be construed or substituted as psychological counselling or any other type of therapy or medical advice. We will at all times exercise our best professional efforts, skills and care in ensuring our clients are mentored to meet their goals. The client understands and acknowledges that we will not be liable legally or otherwise, for the actions the client may or may not undertake as a result of the mentorship sessions. No assumption of responsibility is made, or given, and the client requesting such advice agrees not to hold Bryant Knight, Knight Brands, or any related entities (Provider) responsible or liable in any form or fashion, for such actions taken of their own accord. The method and process by which this advice and direction are given in no manner whatsoever, written or verbal, constitutes an agreement or liability on the part of the provider and is acknowledged to be different in many ways than clinical and medical counselling.</p>
+            <p>Train Collective provides coaching services to specific individuals and/or groups. The client is aware that coaching is in no way to be construed or substituted as psychological counselling or any other type of therapy or medical advice. We will at all times exercise our best professional efforts, skills and care in ensuring our clients are coached to meet their goals. The client understands and acknowledges that we will not be liable legally or otherwise, for the actions the client may or may not undertake as a result of the coaching sessions. No assumption of responsibility is made, or given, and the client requesting such advice agrees not to hold Train Collective or any related entities responsible or liable in any form or fashion, for such actions taken of their own accord.</p>
             
-            <p>You (the client) agree that using any of these mentorship services are entirely at your own risk. Mentorship services are provided "as is", without warranty of any kind, either expressed or implied, including without limitation any warranty for information services, coaching, uninterrupted access, or products and services provided through or in connection with the service. This service is requested at the client's own choice and with inherent singular responsibility. Any actions or lack of actions, taken by the client of such advice is done so solely by choice and responsibility of the client and is neither the responsibility nor liability of Bryant Knight, Knight Brands, or any related entities (Provider). The client takes full responsibility in the decisions they make after being mentored as well as the consequences. The client enters into mentorship with full understanding that they are responsible for creating their own results.</p>
-            
-            <p>Periodically, we may provide links to other web sites or written print material which may be of value, interest and convenience to you. This does not constitute endorsement of material at those sites or any associated organization product or service. It is the responsibility of the user to make their own informed decision about the accuracy of the information at those sites and print material including their privacy policies. In no event shall Bryant Knight, Knight Brands, or any related entities (Provider) be liable for any incident or consequential damages resulting from use of the material.</p>
+            <p>You (the client) agree that using any of these coaching services are entirely at your own risk. Coaching services are provided "as is", without warranty of any kind, either expressed or implied. This service is requested at the client's own choice and with inherent singular responsibility. The client takes full responsibility in the decisions they make after being coached as well as the consequences. The client enters into coaching with full understanding that they are responsible for creating their own results.</p>
         </div>
         
-        <div class="footer-copy">© 2026 Bryant Knight. Los Angeles. All Rights Reserved.</div>
+        <div class="footer-copy">© 2026 Train Collective. Body. Fuel. Mind. All Rights Reserved.</div>
     </footer>
 
     <script>
