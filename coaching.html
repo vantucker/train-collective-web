@@ -798,13 +798,13 @@
         }
 
         .pricing-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .pricing-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .pricing .section-tag {
@@ -823,21 +823,56 @@
 
         .pricing-cards {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin-bottom: 0;
         }
 
-        .pricing-card {
-            padding: 3rem;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+        .pricing-card-full {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .pricing-monthly-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
             position: relative;
         }
 
+        .pricing-monthly-wrapper::before {
+            content: 'OR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dark-bg);
+            padding: 0 1.5rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .pricing-card-monthly {
+            width: 100%;
+        }
+
+        .pricing-card {
+            padding: 4rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            border-radius: 4px;
+        }
+
         .pricing-card.featured {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.08);
             color: var(--white);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 60px rgba(255,255,255,0.05);
         }
 
         .pricing-card.featured .pricing-amount {
@@ -863,99 +898,138 @@
             margin-bottom: 1.5rem;
             display: block;
             color: rgba(255,255,255,0.7);
+            font-weight: 600;
         }
 
         .pricing-amount {
             font-family: 'Chakra Petch', sans-serif;
-            font-size: 3rem;
+            font-size: 4rem;
             font-style: normal;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             color: var(--white);
+            line-height: 1;
+        }
+
+        .pricing-card-monthly .pricing-amount {
+            font-size: 3rem;
         }
 
         .pricing-term {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
 
         .pricing-savings-badge {
             display: inline-block;
             background: var(--white);
             color: var(--dark-bg);
-            padding: 0.5rem 1rem;
-            font-size: 0.7rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            margin-bottom: 1.5rem;
-            border-radius: 2px;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(255,255,255,0.2);
         }
 
         .pricing-comparison {
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.6);
-            margin-bottom: 2rem;
-            font-style: italic;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2.5rem;
+            font-style: normal;
+            padding: 1rem;
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid rgba(255,255,255,0.3);
+            border-radius: 2px;
         }
 
         .pricing-features {
             list-style: none;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem 2rem;
+        }
+
+        .pricing-card-monthly .pricing-features {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem 2rem;
         }
 
         .pricing-features li {
-            padding: 0.6rem 0;
-            font-size: 0.9rem;
+            padding: 0.75rem 0;
+            font-size: 0.95rem;
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255,255,255,0.9);
+            line-height: 1.5;
         }
 
         .pricing-features li::before {
-            content: '';
-            width: 5px;
-            height: 5px;
-            background: var(--white);
-            border-radius: 50%;
-            margin-top: 0.4rem;
+            content: '✓';
+            width: 20px;
+            height: 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 3px;
+            margin-top: 0.1rem;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .pricing-card.featured .pricing-features li::before {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.4);
         }
 
         .pricing-cta {
             width: 100%;
-            padding: 1.25rem;
-            font-size: 0.7rem;
+            padding: 1.5rem 2rem;
+            font-size: 0.75rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            border: 1px solid var(--white);
+            border: 2px solid var(--white);
             background: transparent;
             color: var(--white);
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'DM Sans', sans-serif;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             display: block;
             text-align: center;
+            border-radius: 4px;
         }
 
         .pricing-card.featured .pricing-cta {
             background: var(--white);
             border-color: var(--white);
             color: var(--dark-bg);
+            box-shadow: 0 8px 24px rgba(255,255,255,0.2);
         }
 
         .pricing-cta:hover {
             background: var(--white);
             color: var(--dark-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255,255,255,0.3);
         }
 
         .pricing-card.featured .pricing-cta:hover {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.95);
             color: var(--dark-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255,255,255,0.3);
         }
 
         /* Booking Section */
@@ -1266,6 +1340,40 @@
                 padding: 6rem 2rem;
             }
 
+            .pricing-card {
+                padding: 2.5rem;
+            }
+
+            .pricing-card.featured {
+                padding: 3rem 2.5rem;
+            }
+
+            .pricing-amount {
+                font-size: 3rem;
+            }
+
+            .pricing-card-monthly .pricing-amount {
+                font-size: 2.5rem;
+            }
+
+            .pricing-features {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .pricing-monthly-wrapper {
+                margin-top: 2rem;
+                padding-top: 2rem;
+            }
+
+            .pricing-card-monthly {
+                width: 100%;
+            }
+
+            .pricing-card-monthly .pricing-features {
+                grid-template-columns: 1fr;
+            }
+
             .booking {
                 padding: 6rem 2rem;
             }
@@ -1555,21 +1663,7 @@
             </div>
 
             <div class="pricing-cards">
-                <div class="pricing-card">
-                    <span class="pricing-label">1:1 Elite Coaching</span>
-                    <div class="pricing-amount">$500</div>
-                    <div class="pricing-term">Per month • Application Required</div>
-                    <ul class="pricing-features">
-                        <li>Custom training + nutrition blueprint</li>
-                        <li>1-on-1 dedicated coach access</li>
-                        <li>Weekly video check-ins</li>
-                        <li>Unlimited messaging support</li>
-                        <li>Progress tracking & adjustments</li>
-                        <li>All membership perks</li>
-                    </ul>
-                    <a href="#book-call" class="pricing-cta">Apply Now</a>
-                </div>
-                <div class="pricing-card featured">
+                <div class="pricing-card featured pricing-card-full">
                     <div class="pricing-savings-badge">Save $3,500 (58%)</div>
                     <span class="pricing-label">1:1 Elite Coaching</span>
                     <div class="pricing-amount">$2,500</div>
@@ -1582,6 +1676,22 @@
                         <li>Exclusive annual member resources</li>
                         <li>Extended support hours</li>
                         <li>Annual progress review & planning</li>
+                    </ul>
+                    <a href="#book-call" class="pricing-cta">Apply Now</a>
+                </div>
+            </div>
+            <div class="pricing-monthly-wrapper">
+                <div class="pricing-card pricing-card-monthly">
+                    <span class="pricing-label">1:1 Elite Coaching</span>
+                    <div class="pricing-amount">$500</div>
+                    <div class="pricing-term">Per month • Application Required</div>
+                    <ul class="pricing-features">
+                        <li>Custom training + nutrition blueprint</li>
+                        <li>1-on-1 dedicated coach access</li>
+                        <li>Weekly video check-ins</li>
+                        <li>Unlimited messaging support</li>
+                        <li>Progress tracking & adjustments</li>
+                        <li>All membership perks</li>
                     </ul>
                     <a href="#book-call" class="pricing-cta">Apply Now</a>
                 </div>
