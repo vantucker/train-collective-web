@@ -1,6 +1,10 @@
 # Enable URL rewriting
 RewriteEngine On
 
+# Redirect root URL to traincollective.com
+RewriteCond %{HTTP_HOST} ^offer\.traincollective\.com$ [NC]
+RewriteRule ^$ https://traincollective.com/ [R=301,L]
+
 # Redirect /coaching-1 to coaching.html
 RewriteRule ^coaching-1/?$ coaching.html [L]
 
