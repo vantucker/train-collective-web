@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule Consultation | Train Collective — Body. Fuel. Mind.</title>
+    <title>Thank You | Train Collective — Body. Fuel. Mind.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -82,51 +82,108 @@
             filter: brightness(0) invert(1);
         }
 
-        /* Booking Section */
-        .booking-page {
+        /* Success Section */
+        .success-page {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 8rem 4rem 4rem;
-            max-width: 1000px;
+            text-align: center;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        .booking-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            max-width: 600px;
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 0.8s ease forwards;
         }
 
-        .booking-header h1 {
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--dark-bg);
+        }
+
+        .success-page h1 {
             font-family: 'Chakra Petch', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2.5rem, 2vw, 2.5rem);
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
             text-transform: uppercase;
             color: var(--white);
+            animation: fadeInUp 0.8s ease 0.1s forwards;
+            opacity: 0;
         }
 
-        .booking-header p {
+        .success-page p {
             font-size: 1.1rem;
             color: rgba(255,255,255,0.8);
             line-height: 1.8;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
         }
 
-        .booking-iframe-wrapper {
-            width: 100%;
-            min-height: 600px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .booking-iframe-wrapper iframe {
-            width: 100%;
+        .success-page .btn-primary {
+            background: var(--white);
+            color: var(--dark-bg);
+            padding: 1.25rem 3rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
             border: none;
-            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .success-page .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(255,255,255,0.2);
+        }
+
+        .success-page .instagram-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid var(--white);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 1rem;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .success-page .instagram-link:hover {
+            border-bottom-color: rgba(255,255,255,0.6);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Footer */
@@ -168,12 +225,8 @@
                 padding: 1rem 2rem;
             }
 
-            .booking-page {
+            .success-page {
                 padding: 6rem 2rem 3rem;
-            }
-
-            .booking-iframe-wrapper {
-                min-height: 500px;
             }
 
             footer {
@@ -218,15 +271,16 @@
         </div>
     </nav>
 
-    <!-- Booking Page -->
-    <section class="booking-page">
-        <div class="booking-header">
-            <h1>Schedule Your Consultation</h1>
-            <p>Book a personalized consultation to discuss your fitness goals and see if 1:1 Elite Coaching is right for you.</p>
+    <!-- Success Page -->
+    <section class="success-page">
+        <div class="success-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
         </div>
-        <div class="booking-iframe-wrapper">
-            <iframe src="https://api.leadconnectorhq.com/widget/booking/hheWPhqMkaOXg4Tbp3Zn" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="hheWPhqMkaOXg4Tbp3Zn_1768427523782"></iframe>
-        </div>
+        <h1>Thank You for Scheduling Your 1:1 Private Call</h1>
+        <p>We're excited to connect with you and explore how Train Collective can help elevate your training, nutrition, and mindset.</p>
+        <p>Follow us on Instagram: <a href="https://instagram.com/traincollective" target="_blank" rel="noopener noreferrer" class="instagram-link">@traincollective</a></p>
     </section>
 
     <!-- Footer -->
@@ -248,8 +302,8 @@
             }
         });
     </script>
-    <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 
 </body>
 </html>
+
 

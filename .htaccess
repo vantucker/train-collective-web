@@ -7,6 +7,9 @@ RewriteRule ^coaching-1/?$ coaching.html [L]
 # Redirect /schedule-coaching to schedule.html
 RewriteRule ^schedule-coaching/?$ schedule.html [L]
 
+# Redirect /application-submitted to application-submitted.html
+RewriteRule ^application-submitted/?$ application-submitted.html [L]
+
 # Optional: Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -115,7 +115,7 @@
 
         .success-page h1 {
             font-family: 'Chakra Petch', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-size: clamp(2.5rem, 2vw, 2.5rem);
             font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.2;
@@ -129,9 +129,50 @@
             font-size: 1.1rem;
             color: rgba(255,255,255,0.8);
             line-height: 1.8;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             animation: fadeInUp 0.8s ease 0.2s forwards;
             opacity: 0;
+        }
+
+        .success-page .next-steps {
+            text-align: left;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+
+        .success-page .next-steps h3 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .success-page .next-steps ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .success-page .next-steps li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+        }
+
+        .success-page .next-steps li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--white);
+            font-size: 1.5rem;
+            line-height: 1;
         }
 
         .success-page .btn-primary {
@@ -261,9 +302,21 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
             </svg>
         </div>
-        <h1>Thank You for Applying</h1>
-        <p>Your application has been received. We'll review it and get back to you soon. In the meantime, check your email for confirmation and next steps.</p>
-        <a href="index.html" class="btn-primary">Return to Home</a>
+        <h1>You've successfully passed the initial application.</h1>
+        <p>Train Collective 1-1 coaching is intentionally limited. We work with driven professionals who are ready to raise their standards, not chase quick fixes.</p>
+        
+        <a href="schedule.html" class="btn-primary">Schedule Your Consultation</a>
+        
+        <div class="next-steps">
+            <h3>The next step is a private call to explore:</h3>
+            <ul>
+                <li>Your lifestyle, goals, and current challenges</li>
+                <li>Whether this is the right fit on both sides</li>
+                <li>How we would structure your coaching experience and Improve your lifestyle.</li>
+            </ul>
+        </div>
+
+        <p>If accepted, you'll work directly with an experienced coach inside a fully integrated training, nutrition, lifestyle, and mindset system.</p>
     </section>
 
     <!-- Footer -->
