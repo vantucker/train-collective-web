@@ -833,37 +833,13 @@
 
         .pricing-cards {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 0;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
             margin-bottom: 0;
         }
 
         .pricing-card-full {
             width: 100%;
-            max-width: 100%;
-        }
-
-        .pricing-monthly-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-top: 3rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            position: relative;
-        }
-
-        .pricing-monthly-wrapper::before {
-            content: 'OR';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--dark-bg);
-            padding: 0 1.5rem;
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.6);
         }
 
         .pricing-card-monthly {
@@ -1040,49 +1016,6 @@
             color: var(--dark-bg);
             transform: translateY(-2px);
             box-shadow: 0 12px 32px rgba(255,255,255,0.3);
-        }
-
-        /* Booking Section */
-        .booking {
-            padding: 8rem 6rem;
-            background: var(--dark-bg);
-        }
-
-        .booking-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .booking-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .booking .section-tag {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .booking h2 {
-            font-family: 'Chakra Petch', sans-serif;
-            font-size: clamp(1.5rem, 4vw, 35px);
-            font-style: normal;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            color: var(--white);
-        }
-
-        .booking-iframe-wrapper {
-            width: 100%;
-            min-height: 600px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .booking-iframe-wrapper iframe {
-            width: 100%;
-            border: none;
-            overflow: hidden;
         }
 
         /* Testimonials */
@@ -1371,11 +1304,6 @@
                 gap: 0.75rem;
             }
 
-            .pricing-monthly-wrapper {
-                margin-top: 2rem;
-                padding-top: 2rem;
-            }
-
             .pricing-card-monthly {
                 width: 100%;
             }
@@ -1384,9 +1312,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .booking {
-                padding: 6rem 2rem;
-            }
 
             .final-cta {
                 padding: 6rem 2rem;
@@ -1437,8 +1362,8 @@
             <h1>Shape Your Strongest Self<br>with <em>1:1 Personalized</em> Coaching</h1>
             <p class="hero-subtitle">A premium 1-on-1 performance program integrating Fitness, Nutrition, and Mindset. Custom-built for high-performers who demand results—not excuses.</p>
             <div class="hero-cta-group">
-                <a href="#apply" class="btn-primary">Apply for 1:1 Coaching</a>
-                <a href="#about" class="btn-secondary">See If You Qualify</a>
+                <a href="apply.html" class="btn-primary">Apply for 1:1 Coaching</a>
+                <a href="#about" class="btn-secondary">Learn more</a>
             </div>
         </div>
     </section>
@@ -1668,67 +1593,8 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="apply">
-        <div class="pricing-container">
-            <div class="pricing-header">
-                <div class="section-tag">Investment</div>
-                <h2>Choose Your Path</h2>
-            </div>
-
-            <div class="pricing-cards">
-                <div class="pricing-card featured pricing-card-full">
-                    <div class="pricing-savings-badge">Save $3,500 (58%)</div>
-                    <span class="pricing-label">1:1 Elite Coaching</span>
-                    <div class="pricing-amount">$2,500</div>
-                    <div class="pricing-term">Per year • Application Required</div>
-                    <div class="pricing-comparison">vs. $6,000/monthly billing</div>
-                    <ul class="pricing-features">
-                        <li>Everything in monthly plan</li>
-                        <li>Priority coach assignment</li>
-                        <li>Quarterly strategy deep-dives</li>
-                        <li>Exclusive annual member resources</li>
-                        <li>Extended support hours</li>
-                        <li>Annual progress review & planning</li>
-                    </ul>
-                    <a href="#book-call" class="pricing-cta">Apply Now</a>
-                </div>
-            </div>
-            <div class="pricing-monthly-wrapper">
-                <div class="pricing-card pricing-card-monthly">
-                    <span class="pricing-label">1:1 Elite Coaching</span>
-                    <div class="pricing-amount">$500</div>
-                    <div class="pricing-term">Per month • Application Required</div>
-                    <ul class="pricing-features">
-                        <li>Custom training + nutrition blueprint</li>
-                        <li>1-on-1 dedicated coach access</li>
-                        <li>Weekly video check-ins</li>
-                        <li>Unlimited messaging support</li>
-                        <li>Progress tracking & adjustments</li>
-                        <li>All membership perks</li>
-                    </ul>
-                    <a href="#book-call" class="pricing-cta">Apply Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section class="booking" id="book-call">
-        <div class="booking-container">
-            <div class="booking-header">
-                <div class="section-tag">Application</div>
-                <h2>See If You Qualify</h2>
-            </div>
-            <div class="booking-iframe-wrapper">
-                <!-- Replace with your actual booking/application form -->
-                <iframe src="https://api.leadconnectorhq.com/widget/booking/Ben2PTQs0SlEMZO5luGy" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="Ben2PTQs0SlEMZO5luGy_1767382487013"></iframe>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials -->
-    <section class="testimonials fade-in">
+    <section class="testimonials fade-in" id="testimonials">
         <div class="testimonials-header">
             <div class="section-tag">What Members Say</div>
         </div>
@@ -1759,7 +1625,7 @@
         <div class="final-cta-content">
             <h2>Ready to Shape Your Strongest Self?</h2>
             <p>1:1 Coaching accepts limited clients each quarter. Applications are reviewed personally to ensure fit. Only those committed to real transformation will be accepted.</p>
-            <a href="#book-call" class="btn-primary">Apply for 1:1 Coaching</a>
+            <a href="apply.html" class="btn-primary">Apply for 1:1 Coaching</a>
             <div class="spots-remaining">Limited spots available for this cohort</div>
         </div>
     </section>

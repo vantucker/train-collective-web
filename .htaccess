@@ -4,8 +4,12 @@ RewriteEngine On
 # Redirect /coaching-1 to coaching.html
 RewriteRule ^coaching-1/?$ coaching.html [L]
 
+# Redirect /schedule-coaching to schedule.html
+RewriteRule ^schedule-coaching/?$ schedule.html [L]
+
 # Optional: Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
 
