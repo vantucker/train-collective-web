@@ -43,6 +43,7 @@
             color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
+            padding-bottom: 80px;
         }
 
         /* Grain Overlay */
@@ -484,7 +485,7 @@
             display: grid;
             grid-template-columns: 1fr 1.2fr;
             gap: 6rem;
-            align-items: center;
+            align-items: start;
         }
 
         .about-image {
@@ -514,8 +515,14 @@
             filter: brightness(0) invert(1);
         }
 
+        .about-content {
+            display: flex;
+            flex-direction: column;
+        }
+
         .about-content .section-tag {
             color: var(--white);
+            margin-bottom: 1.5rem;
         }
 
         .about h2 {
@@ -524,15 +531,17 @@
             font-style: normal;
             font-weight: 700;
             line-height: 1.25;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             text-transform: uppercase;
+            max-width: 100%;
         }
 
         .about-text {
             color: rgba(255,255,255,0.7);
             font-size: 1.05rem;
             line-height: 1.9;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            max-width: 100%;
         }
 
         .about-credentials {
@@ -1033,7 +1042,7 @@
             padding: 8rem 6rem;
             max-width: 1200px;
             margin: 0 auto;
-            display: none;
+            display: block;
         }
 
         .testimonials-header {
@@ -1045,9 +1054,21 @@
             color: rgba(255,255,255,0.7);
         }
 
+        .testimonials h2 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 35px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+            color: var(--white);
+            text-align: center;
+        }
+
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
@@ -1082,6 +1103,43 @@
         .testimonial-role {
             font-size: 0.75rem;
             color: rgba(255,255,255,0.7);
+        }
+
+        /* New CTA Section */
+        .new-cta {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 6rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .new-cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .new-cta h2 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: clamp(1.5rem, 5vw, 35px);
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .new-cta .btn-primary {
+            background: var(--white);
+            color: var(--dark-bg);
+            padding: 1.5rem 4rem;
+        }
+
+        .new-cta .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
         }
 
         /* CTA Section */
@@ -1214,6 +1272,30 @@
             text-align: center;
         }
 
+        /* Sticky Footer */
+        .sticky-footer {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-bg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .sticky-footer .btn-primary {
+            padding: 1rem 3rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             nav {
@@ -1222,6 +1304,26 @@
 
             .hero {
                 padding: 6rem 2rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+                line-height: 1.2;
+                word-spacing: normal;
+                letter-spacing: -0.02em;
+                hyphens: auto;
+                word-break: break-word;
+                max-width: 100%;
+            }
+
+            .hero h1 br {
+                display: block;
+                margin: 0.25rem 0;
+            }
+
+            .hero h1 em {
+                display: inline;
+                word-break: keep-all;
             }
 
             .hero-cta-group {
@@ -1276,6 +1378,10 @@
                 gap: 3rem;
             }
 
+            .ideal-for {
+                padding: 4rem 0;
+            }
+
             .ideal-for h2 {
                 position: static;
             }
@@ -1283,10 +1389,14 @@
             .ideal-profiles {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+                width: 100%;
             }
 
             .profile {
                 width: 100%;
+                max-width: 100%;
+                padding: 2rem 1.5rem;
+                box-sizing: border-box;
             }
 
             .pricing,
@@ -1324,6 +1434,10 @@
             }
 
 
+            .new-cta {
+                padding: 4rem 2rem;
+            }
+
             .final-cta {
                 padding: 6rem 2rem;
             }
@@ -1342,6 +1456,20 @@
 
             .footer-legal {
                 font-size: 0.65rem;
+            }
+
+            /* Sticky footer adjustments for mobile */
+            body {
+                padding-bottom: 80px;
+            }
+
+            .sticky-footer {
+                padding: 1rem 2rem;
+            }
+
+            .sticky-footer .btn-primary {
+                width: 100%;
+                padding: 1rem 2rem;
             }
         }
 
@@ -1382,8 +1510,8 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">Now Accepting Applications • Limited Spots</div>
-            <h1>Shape Your Strongest Self<br>with <em>1:1 Personalized</em> Coaching</h1>
-            <p class="hero-subtitle">A premium 1-on-1 performance program integrating Fitness, Nutrition, and Mindset. Custom-built for high-performers who demand results—not excuses.</p>
+            <h1>Build Your Strongest Self<br>with <em>1:1 Bespoke</em> Coaching</h1>
+            <p class="hero-subtitle">Our 1:1 coaching framework integrates training, nutrition, and mindset into one performance system. Custom built for high performers who demand results, structure, and accountability, not excuses.</p>
             <div class="hero-cta-group">
                 <a href="apply.html" class="btn-primary">Apply for 1:1 Coaching</a>
                 <a href="#about" class="btn-secondary">LEARN MORE</a>
@@ -1436,7 +1564,9 @@
     <!-- Problem Section -->
     <section class="problem fade-in">
         <div class="section-tag">The Reality</div>
-        <h2>You're not average. Generic programs and random workouts will never get you where you want to go. You need a system—not a shortcut.</h2>
+        <h2 style="margin-bottom: 0.75rem; max-width: 700px;">You are not average. So stop training like you are.</h2>
+        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8; max-width: 700px; margin-bottom: 1.5rem;">Generic programs, random workouts, and surface level advice will never match the standards you hold in business or life. High performers do not need more information. They need structure, precision, and a system that compounds.</p>
+        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8; max-width: 700px; margin-bottom: 4rem;">You do not need a shortcut. You need a framework that works.</p>
         
         <div class="problem-grid">
             <div class="problem-card">
@@ -1477,15 +1607,32 @@
         <div class="about-container">
             <div class="about-image">
                 <div class="about-image-frame">
-                    <img src="https://traincollective.com/wp-content/uploads/2026/01/train-collective-01-1-2-scaled.jpg" alt="Train Collective">
+                    <img src="assets/TRAIN-COLLECTIVE---WEBSITE-CONTENT-UPDATES.jpg" alt="Train Collective">
                 </div>
             </div>
             <div class="about-content">
-                <div class="section-tag">The Train Collective Difference</div>
-                <h2>1:1 Personalized Coaching is not another fitness app. It's a complete transformation system.</h2>
-                <p class="about-text">Most programs treat fitness, nutrition, and mindset as separate problems. At Train Collective, we know they're one integrated system. When all three align, everything changes.</p>
-                <p class="about-text">1:1 Coaching pairs you with a dedicated performance coach who builds your custom blueprint—training progressions designed for your equipment, nutrition protocols that fit your lifestyle, and mindset frameworks that create unshakeable consistency.</p>
-                <p class="about-text">This isn't coaching for everyone. It's for those ready to invest in themselves and commit to the work.</p>
+                <div class="section-tag">1:1 Bespoke Coaching</div>
+                <h2>This Is Not Another Fitness Programme.<br>This Is a Performance System.</h2>
+                <p class="about-text">Most coaching treats training, nutrition, and mindset as separate problems. That approach fails long term.</p>
+                <p class="about-text" style="font-weight: 500; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem;">At Train Collective, we operate from a different standard.</p>
+                <p class="about-text" style="margin-bottom: 2.5rem;">Your body, habits, and thinking are one integrated system. When they align, performance follows.</p>
+                <p class="about-text" style="margin-bottom: 1.25rem; font-weight: 500; color: rgba(255,255,255,0.9);">1:1 Coaching pairs you with a dedicated performance coach who designs your personal blueprint:</p>
+                <ul style="list-style: none; padding-left: 0; margin: 0 0 2.5rem 0;">
+                    <li style="padding: 0.5rem 0; padding-left: 1.75rem; position: relative; color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.85;">
+                        <span style="position: absolute; left: 0; top: 0.5rem; color: var(--white); font-weight: 600; font-size: 1.1rem;">•</span>
+                        Training built around your schedule, equipment, and capacity
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 1.75rem; position: relative; color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.85;">
+                        <span style="position: absolute; left: 0; top: 0.5rem; color: var(--white); font-weight: 600; font-size: 1.1rem;">•</span>
+                        Nutrition protocols that fit real life, not perfection
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 1.75rem; position: relative; color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.85;">
+                        <span style="position: absolute; left: 0; top: 0.5rem; color: var(--white); font-weight: 600; font-size: 1.1rem;">•</span>
+                        Mindset frameworks that remove friction and build consistency
+                    </li>
+                </ul>
+                <p class="about-text" style="margin-bottom: 0.75rem; font-weight: 600; color: var(--white); font-size: 1.1rem;">This is not for everyone.</p>
+                <p class="about-text" style="margin-bottom: 0;">It is for those prepared to invest properly, commit fully, and execute with intent.</p>
                 
                 <div class="about-credentials">
                     <div class="credential">
@@ -1504,55 +1651,68 @@
     <!-- Cohort Section -->
     <section class="cohort fade-in">
         <div class="cohort-header">
-            <div class="section-tag">The 1:1 Method</div>
+            <div class="section-tag">WHAT'S INCLUDED</div>
             <h2>Your Complete Performance Blueprint</h2>
-            <p class="cohort-subtitle">A cohort-based coaching experience engineered for transformation. Every element designed to work together.</p>
+            <p class="cohort-subtitle" style="margin-bottom: 1rem;">A private, 1:1 coaching experience engineered for long term transformation.</p>
+            <p class="cohort-subtitle" style="margin-bottom: 0.5rem;">Every element is intentional.</p>
+            <p class="cohort-subtitle" style="margin-bottom: 0.5rem;">Every system works together.</p>
+            <p class="cohort-subtitle" style="margin-bottom: 0.5rem;">Nothing is left to chance.</p>
+            <p class="cohort-subtitle" style="margin-bottom: 0.5rem;">This is how structure replaces guesswork.</p>
+            <p class="cohort-subtitle" style="margin-bottom: 0;">This is how discipline becomes automatic.</p>
         </div>
 
         <div class="cohort-features">
             <div class="feature">
                 <span class="feature-number">01</span>
                 <h3>Custom Training Architecture</h3>
-                <p>Structured progressions built specifically for you—whether you train at home, in a garage gym, or a full facility.</p>
+                <p style="margin-bottom: 1rem;">Training designed around you, not a template.</p>
+                <p style="margin-bottom: 1.5rem;">Every programme is built specifically for your environment, experience, and goals, whether you train at home, in a private gym, or a full facility.</p>
                 <ul class="feature-list">
-                    <li>Personalized program design</li>
-                    <li>Weekly progression adjustments</li>
-                    <li>Video demos & form feedback</li>
-                    <li>Recovery & mobility protocols</li>
+                    <li>Fully personalised programme design</li>
+                    <li>Weekly progression and load management</li>
+                    <li>Video demonstrations and technique feedback</li>
+                    <li>Integrated recovery and mobility protocols</li>
                 </ul>
+                <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.9); font-weight: 500; font-style: italic;">No wasted sessions. No random volume. Just intelligent progression.</p>
             </div>
             <div class="feature">
                 <span class="feature-number">02</span>
                 <h3>Precision Nutrition Protocol</h3>
-                <p>Simple fueling strategies that work with your life, not against it. Macro frameworks, meal templates, and flexible guidelines.</p>
+                <p style="margin-bottom: 1rem;">Fuel that supports performance without controlling your life.</p>
+                <p style="margin-bottom: 1.5rem;">We focus on clarity, flexibility, and execution. Nutrition that works in the real world, including work, travel, and social commitments.</p>
                 <ul class="feature-list">
-                    <li>Custom calorie & macro targets</li>
-                    <li>Meal templates & grocery lists</li>
-                    <li>Travel & dining-out strategies</li>
-                    <li>Hydration & supplement guidance</li>
+                    <li>Personal calorie and macro targets</li>
+                    <li>Simple meal templates and shopping lists</li>
+                    <li>Travel, dining-out, and lifestyle strategies</li>
+                    <li>Hydration and supplement guidance</li>
                 </ul>
+                <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.9); font-weight: 500; font-style: italic;">Structure without restriction. Control without obsession.</p>
             </div>
             <div class="feature">
                 <span class="feature-number">03</span>
                 <h3>Mindset Mastery</h3>
-                <p>Build the mental architecture that makes consistency automatic. Habits, frameworks, and resilience tools that last.</p>
+                <p style="margin-bottom: 1rem;">Consistency is not motivation. It is systems.</p>
+                <p style="margin-bottom: 1.5rem;">We build the mental architecture that removes decision fatigue and reinforces discipline, even under pressure.</p>
                 <ul class="feature-list">
-                    <li>Daily habit anchoring system</li>
-                    <li>Weekly reflection prompts</li>
-                    <li>Stress & sleep optimization</li>
-                    <li>Goal-setting frameworks</li>
+                    <li>Daily habit anchoring systems</li>
+                    <li>Weekly reflection and review prompts</li>
+                    <li>Stress management and sleep optimisation</li>
+                    <li>Goal-setting and performance frameworks</li>
                 </ul>
+                <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.9); font-weight: 500; font-style: italic;">This is where habits lock in and standards rise.</p>
             </div>
             <div class="feature">
                 <span class="feature-number">04</span>
-                <h3>1-on-1 Accountability</h3>
-                <p>Direct access to your coach. Weekly check-ins, real-time adjustments, and the support structure that ensures you never fall off.</p>
+                <h3>True 1:1 Accountability</h3>
+                <p style="margin-bottom: 1rem;">This is not check-ins and hope.</p>
+                <p style="margin-bottom: 1.5rem;">You have direct access to your coach, ongoing feedback, and a support structure designed to keep you moving forward, even when life gets busy.</p>
                 <ul class="feature-list">
-                    <li>Weekly video check-ins</li>
-                    <li>Unlimited messaging support</li>
-                    <li>Progress tracking & analytics</li>
-                    <li>Quarterly strategy sessions</li>
+                    <li>Weekly 1:1 video check-ins</li>
+                    <li>Unlimited direct messaging support</li>
+                    <li>Progress tracking and performance metrics</li>
+                    <li>Quarterly strategy and recalibration sessions</li>
                 </ul>
+                <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.9); font-weight: 500; font-style: italic;">No drifting. No disappearing. No excuses.</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 3rem;">
@@ -1563,25 +1723,36 @@
     <!-- Ideal For Section -->
     <section class="ideal-for">
         <div class="ideal-for-container">
-            <h2>1:1 Coaching Is For:</h2>
+            <h2>Who 1:1 Coaching Is For</h2>
             <div class="ideal-profiles">
                 <div class="profile">
                     <div class="profile-title">High-Performing Professionals</div>
-                    <div class="profile-desc">Busy executives and entrepreneurs who need efficient, structured training that delivers results without wasting time.</div>
+                    <div class="profile-desc">Executives, founders, and leaders who demand structure, efficiency, and results without wasted time or mental noise.</div>
                 </div>
                 <div class="profile">
-                    <div class="profile-title">Athletes Seeking the Edge</div>
-                    <div class="profile-desc">Former or current athletes who know what discipline feels like and want to reclaim peak performance.</div>
+                    <div class="profile-title">Athletes Who Miss the Edge</div>
+                    <div class="profile-desc">Former or current athletes who understand discipline and want to reclaim performance, strength, and identity.</div>
                 </div>
                 <div class="profile">
-                    <div class="profile-title">Committed Transformers</div>
-                    <div class="profile-desc">Men and women serious about body recomposition who are done with fads and ready for the real work.</div>
+                    <div class="profile-title">Serious Transformers</div>
+                    <div class="profile-desc">Men and women who are done with fads, quick fixes, and surface-level effort and are ready to commit to real body and lifestyle change.</div>
                 </div>
                 <div class="profile">
                     <div class="profile-title">Lifestyle Optimizers</div>
-                    <div class="profile-desc">Those who understand that physical excellence is the foundation for success in every other area of life.</div>
+                    <div class="profile-desc">Those who recognize that physical strength, energy, and clarity are the foundation for success in every other area of life.</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- New CTA Section -->
+    <section class="new-cta">
+        <div class="new-cta-content">
+            <h2>This Is Train Collective 1:1 Coaching</h2>
+            <p style="margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600; color: var(--white);">Structured. Intentional. Demanding.</p>
+            <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.8);">Built for those who expect more from themselves.</p>
+            <p style="margin-bottom: 3rem; font-size: 1.05rem; color: rgba(255,255,255,0.7);">If that resonates, apply.</p>
+            <a href="apply.html" class="btn-primary">Apply for 1:1 Coaching</a>
         </div>
     </section>
 
@@ -1628,26 +1799,29 @@
     <!-- Testimonials -->
     <section class="testimonials fade-in" id="testimonials">
         <div class="testimonials-header">
-            <div class="section-tag">What Members Say</div>
+            <div class="section-tag">TESTIMONIALS</div>
+            <h2>Real Results. Real People.</h2>
         </div>
         <div class="testimonial-grid">
             <div class="testimonial">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Train Collective isn't random workouts—it's a complete system. The integration of training, nutrition, and mindset is what sets it apart."</p>
-                <div class="testimonial-author">1:1 Client</div>
-                <div class="testimonial-role">Executive</div>
+                <p class="testimonial-text">"Running multiple businesses with two kids, including a newborn, I had no space for guesswork. Train Collective gave me structure, clarity, and accountability. My training is efficient, my nutrition is simple, and my mindset is locked in. I am stronger, leaner, and far more consistent than I have ever been, even with a full plate."</p>
+                <div class="testimonial-author">Bryant</div>
+                <div class="testimonial-role">Entrepreneur & Business Owner</div>
             </div>
             <div class="testimonial">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"My coach understood my schedule and built around it. For the first time, I didn't have to choose between work and fitness."</p>
-                <div class="testimonial-author">1:1 Client</div>
-                <div class="testimonial-role">Entrepreneur</div>
+                <p class="testimonial-text">"My lifestyle is non-negotiable. I expect high standards physically and mentally. Train Collective elevated everything. Training is precise and my mindset is sharper. I am performing at a higher level without sacrificing the freedom I value. This is coaching for people who refuse to coast."</p>
+                <div class="testimonial-author">Kevin</div>
+                <div class="testimonial-role">Founder, Costa Rica</div>
             </div>
             <div class="testimonial">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"The mindset component surprised me. It's not fluff—it's the actual framework that keeps everything else working."</p>
-                <div class="testimonial-author">1:1 Client</div>
-                <div class="testimonial-role">Former Athlete</div>
+                <p class="testimonial-text">"I coach others at a high level, but I needed someone to hold me to the same standard. Train Collective rebuilt my confidence through structure and execution. My body composition, presence, and energy have all shifted. I show up sharper, stronger, and more aligned with the man I expect myself to be."</p>
+                <div class="testimonial-author">Laurence</div>
+                <div class="testimonial-role">High-Performance Life Coach</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"As a coach, I needed someone else to take the thinking out of my own training. Train Collective gave me that. Clear programming, intelligent progression, and proper accountability. I am training with focus again, my body has changed, and my confidence has gone up both personally and professionally."</p>
+                <div class="testimonial-author">Emma</div>
+                <div class="testimonial-role">Coach & Practitioner</div>
             </div>
         </div>
         <div style="text-align: center; margin-top: 3rem;">
@@ -1658,8 +1832,11 @@
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="final-cta-content">
-            <h2>Ready to Shape Your Strongest Self?</h2>
-            <p>1:1 Coaching accepts limited clients each quarter. Applications are reviewed personally to ensure fit. Only those committed to real transformation will be accepted.</p>
+            <h2>Ready to Build Your Strongest Self?</h2>
+            <p style="margin-bottom: 1rem;">1:1 Coaching accepts a limited number of clients each quarter.</p>
+            <p style="margin-bottom: 1rem;">Every application is reviewed personally.</p>
+            <p style="margin-bottom: 1.5rem; font-weight: 500;">Fit matters. Commitment matters.</p>
+            <p style="margin-bottom: 3rem;">If you are ready to raise your standards and take ownership of your health, performance, and lifestyle, apply below.</p>
             <a href="apply.html" class="btn-primary">Apply for 1:1 Coaching</a>
             <div class="spots-remaining">Limited spots available for this cohort</div>
         </div>
@@ -1691,6 +1868,11 @@
         
         <div class="footer-copy">© 2026 Train Collective. Body. Fuel. Mind. All Rights Reserved.</div>
     </footer>
+
+    <!-- Sticky Footer for Mobile -->
+    <div class="sticky-footer">
+        <a href="apply.html" class="btn-primary">Apply for 1:1 Coaching</a>
+    </div>
 
     <script>
         // Video play function
